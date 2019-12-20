@@ -11,24 +11,10 @@ import SwiftUI
 struct NewPage: View {
     
     @ObservedObject var locationManager = LocationManager()
-    var userLatitude: String {
-        return "\(locationManager.lastLocation?.coordinate.latitude ?? 0)"
-    }
 
-    var userLongitude: String {
-        return "\(locationManager.lastLocation?.coordinate.longitude ?? 0)"
-    }
     var body: some View {
        
-        Button(action: {
-            UIApplication.shared.open(URL(string:UIApplication.openSettingsURLString)!)
-            
-        }) {
-            HStack {
-                Image(systemName: "mappin.circle")
-                Text("Location Setting")
-            }
-        }
+        Text("New Page")
           
         
     }
